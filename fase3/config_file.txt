@@ -1,0 +1,18 @@
+Config File
+------
+ip- 127.0.0.1
+portaClient- 12345
+portaServer- 12346
+------
+ip- 127.0.0.2
+ip_rp- 127.0.0.1
+porta_rp- 12346
+stream- ../VIDEO/video.mp4
+stream- ../VIDEO/videoA.mp4
+stream- ../VIDEO/videoB.mp4
+------
+ip- 127.0.0.3
+neighbour- 127.0.0.1 - 12345
+------
+ip- 127.0.0.4
+neighbour- 127.0.0.1 - 12345

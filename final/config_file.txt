@@ -1,0 +1,135 @@
+Config File
+---common information---
+nodePort- 11111
+streamPort- 22222
+ident- 10.0.
+------
+ip- 10.0.8.2
+type- RendezvousPoint
+neighbour- 10.0.19.21
+neighbour- 10.0.13.2
+neighbour- 10.0.1.1
+neighbour- 10.0.2.1
+portaClient- 12345
+portaServer- 12346
+------
+ip- 10.0.19.21
+type- Client
+neighbour- 10.0.8.2
+rp- 10.0.8.2 - 12345
+------
+ip- 10.0.13.2
+type- Node
+neighbour- 10.0.11.2
+neighbour- 10.0.8.2
+neighbour- 10.0.21.10
+------
+ip- 10.0.21.10
+type- Server
+neighbour- 10.0.13.2
+rp- 10.0.8.2 - 12346
+stream- /home/core/Desktop/ESR/VIDEO/Slow_J.mp4
+------
+ip- 10.0.11.2
+type- Node
+neighbour- 10.0.13.2
+neighbour- 10.0.20.21
+neighbour- 10.0.1.1
+------
+ip- 10.0.20.21
+type- Client
+neighbour- 10.0.11.2
+rp- 10.0.8.2 - 12345
+------
+ip- 10.0.1.1
+type- Node
+neighbour- 10.0.0.21
+neighbour- 10.0.0.20
+neighbour- 10.0.11.2
+neighbour- 10.0.8.2
+neighbour- 10.0.2.1
+------
+ip- 10.0.0.20
+type- Client
+neighbour- 10.0.1.1
+rp- 10.0.8.2 - 12345
+------
+ip- 10.0.0.21
+type- Client
+neighbour- 10.0.1.1
+rp- 10.0.8.2 - 12345
+------
+ip- 10.0.2.1
+type- Node
+neighbour- 10.0.1.1
+neighbour- 10.0.8.2
+neighbour- 10.0.18.10
+------
+ip- 10.0.18.10
+type- Server
+neighbour- 10.0.2.1
+rp- 10.0.8.2 - 12346
+stream- /home/core/Desktop/ESR/VIDEO/Central_Cee.mp4
+stream- /home/core/Desktop/ESR/VIDEO/Matue.mp4
+------
+
+
+
+
+
+------
+test on localHost
+------
+ip- 127.0.0.2
+type- Server
+neighbour- 127.0.0.1
+rp- 127.0.0.1 - 12346
+stream- ../VIDEO/Central_Cee.mp4
+stream- ../VIDEO/Matue.mp4
+------
+ip- 127.0.0.22
+type- Server
+neighbour- 127.0.0.1
+rp- 127.0.0.1 - 12346
+stream- ../VIDEO/Slow_J.mp4
+------
+ip- 127.0.0.1
+type- RendezvousPoint
+neighbour- 127.0.0.2
+neighbour- 127.0.0.22
+neighbour- 127.0.0.3
+neighbour- 127.0.0.6
+portaClient- 12345
+portaServer- 12346
+------
+ip- 127.0.0.3
+type- Node
+neighbour- 127.0.0.4
+neighbour- 127.0.0.1
+------
+ip- 127.0.0.4
+type- Node
+neighbour- 127.0.0.3
+neighbour- 127.0.0.5
+------
+ip- 127.0.0.5
+type- Node
+neighbour- 127.0.0.4
+neighbour- 127.0.0.6
+neighbour- 127.0.0.7
+neighbour- 127.0.0.8
+------
+ip- 127.0.0.6
+type- Node
+neighbour- 127.0.0.1
+neighbour- 127.0.0.5
+------
+ip- 127.0.0.7
+type- Client
+neighbour- 127.0.0.5
+rp- 127.0.0.1 - 12345
+------
+ip- 127.0.0.8
+type- Client
+neighbour- 127.0.0.5
+rp- 127.0.0.1 - 12345

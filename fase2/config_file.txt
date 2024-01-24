@@ -1,0 +1,124 @@
+Config File
+------
+ip- 10.0.12.2
+type- RendezvousPoint
+nodePort- 11111
+neighbour- 10.0.15.21 - 11111
+neighbour- 10.0.18.2 - 11111
+neighbour- 10.0.0.1 - 11111
+neighbour- 10.0.1.2 - 11111
+portaClient- 12345
+portaServer- 12346
+------
+ip- 10.0.15.21
+type- Client
+nodePort- 11111
+neighbour- 10.0.12.2 - 11111
+rp- 127.0.0.1 - 12345
+------
+ip- 10.0.18.2
+type- Node
+nodePort- 11111
+neighbour- 10.0.12.2 - 11111
+neighbour- 10.0.20.10 - 11111
+neighbour- 10.0.9.2 - 11111
+------
+ip- 10.0.20.10
+type- Server
+nodePort- 11111
+neighbour- 10.0.18.2 - 11111
+rp- 127.0.0.1 - 12345
+------
+ip- 10.0.9.2
+type- Node
+nodePort- 11111
+neighbour- 10.0.18.2 - 11111
+neighbour- 10.0.8.21 - 11111
+neighbour- 10.0.0.1- 11111
+------
+ip- 10.0.8.21
+type- Client
+nodePort- 11111
+neighbour- 10.0.9.2 - 11111
+rp- 127.0.0.1 - 12345
+------
+ip- 10.0.0.1
+type- Node
+nodePort- 11111
+neighbour- 10.0.9.2 - 11111
+neighbour- 10.0.12.2 - 11111
+neighbour- 10.0.1.2- 11111
+neighbour- 10.0.0.20 - 11111
+neighbour- 10.0.0.21- 11111
+------
+ip- 10.0.0.20
+type- Client
+nodePort- 11111
+neighbour- 10.0.0.1 - 11111
+rp- 127.0.0.1 - 12345
+------
+ip- 10.0.0.21
+type- Client
+nodePort- 11111
+neighbour- 10.0.0.1 - 11111
+rp- 127.0.0.1 - 12345
+------
+ip- 10.0.1.2
+type- Node
+nodePort- 11111
+neighbour- 10.0.0.1 - 11111
+neighbour- 10.0.12.2 - 11111
+neighbour- 10.0.3.10- 11111
+------
+ip- 10.0.3.10
+type- Server
+nodePort- 11111
+neighbour- 10.0.1.2 - 11111
+rp- 127.0.0.1 - 12346
+stream- ../VIDEO/video.mp4
+stream- ../VIDEO/videoA.mp4
+stream- ../VIDEO/videoB.mp4
+------
+------
+test on localHost
+------
+ip- 127.0.0.1
+type- RendezvousPoint
+nodePort- 11111
+neighbour- 127.0.0.2 - 11111
+portaClient- 12345
+portaServer- 12346
+------
+ip- 127.0.0.2
+type- Server
+nodePort- 11111
+neighbour- 127.0.0.1 - 11111
+neighbour- 127.0.0.3 - 11111
+rp- 127.0.0.1 - 12346
+stream- ../VIDEO/video.mp4
+stream- ../VIDEO/videoA.mp4
+stream- ../VIDEO/videoB.mp4
+------
+ip- 127.0.0.3
+type- Node
+nodePort- 11111
+neighbour- 127.0.0.2 - 11111
+------
+ip- 127.0.0.4
+type- Node
+nodePort- 11111
+neighbour- 127.0.0.3 - 11111
+------
+ip- 127.0.0.5
+type- Client
+nodePort- 11111
+neighbour- 127.0.0.4 - 11111
+neighbour- 127.0.0.2 - 11111
+rp- 127.0.0.1 - 12345
+------
+ip- 127.0.0.6
+type- Client
+nodePort- 11111
+neighbour- 127.0.0.4 - 11111
+rp- 127.0.0.1 - 12345
+------
